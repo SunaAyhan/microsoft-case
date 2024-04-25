@@ -24,20 +24,19 @@ interface AppPage {
 const appPages: AppPage[] = [
   {
     title: 'Reviews',
-    url: '/folder/Inbox',
+    url: '/folder/Reviews',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
   {
     title: 'Write New Review',
-    url: '/folder/Outbox',
+    url: '/folder/Write Your Message',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
   
 ];
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
 const Menu: React.FC = () => {
   const location = useLocation();

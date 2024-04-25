@@ -1,0 +1,10 @@
+.custom-background {
+    background: url('../../public/assets/louvre.jpg') no-repeat center center / cover !important;
+    height: 100vh; /* Viewport'un tamamını kaplar */
+  min-height: 100vh;
+  }
+  .ion-title {
+    font-size: 2rem;
+   
+  }
+  
