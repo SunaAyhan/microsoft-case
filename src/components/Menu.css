@@ -4,14 +4,25 @@ ion-menu ion-content {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 
 
+
 }
 
-ion-menu.md {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+@media (max-width: 768px) {
 
-  border: none;
-  max-width: 10rem;
+  ion-menu.md {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border: none;
 
+  }
+}
+
+@media (min-width: 769px) {
+  ion-menu.md {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    max-width: 10rem;
+
+  }
 }
 
 ion-menu.md ion-content {
