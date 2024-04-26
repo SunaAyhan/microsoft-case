@@ -50,6 +50,9 @@ const App: React.FC = () => {
         <Route path="/login" exact={true}>
           <LoginPage />
         </Route>
+        <Route path="/" >
+          <Redirect to="/pages/messages" />
+        </Route>
         <Route path="/pages">
           <IonSplitPane contentId="main">
             <Menu />
