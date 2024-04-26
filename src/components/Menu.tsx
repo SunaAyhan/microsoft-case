@@ -23,14 +23,14 @@ interface AppPage {
 
 const appPages: AppPage[] = [
   {
-    title: 'Reviews',
-    url: '/reviews',
+    title: 'Messages',
+    url: '/pages/messages',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
   {
-    title: 'Write New Review',
-    url: '/messages',
+    title: 'Write New Message',
+    url: '/pages/newMessage',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },

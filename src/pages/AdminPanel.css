@@ -1,0 +1,66 @@
+@media (max-width: 768px) {
+    .card-custom {
+        --ion-background-color: #ffffff;
+        z-index: 100;
+    }
+
+    .ion-page-custom {
+        --ion-background-color: #F8F0E5;
+    }
+
+    .label-custom {
+        --ion-background-color: #F8F0E5;
+    }
+
+
+    .ion-text-custom {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-family: Sedan;
+        color: #0F2C59;
+        font-weight: 600;
+
+    }
+}
+
+
+@media (min-width: 769px) {
+    .card-custom {
+        --ion-background-color: white;
+        z-index: 100;
+        margin: 2rem;
+        width: 50%;
+        height: 70%;
+        overflow-y: auto;
+    }
+
+    .ion-page-custom {
+        --ion-background-color: #F8F0E5;
+
+
+    }
+
+
+    .ion-text-custom {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-family: Sedan;
+        color: #0F2C59;
+        font-weight: 600;
+        text-align: center;
+
+    }
+
+    .ion-content-custom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+
+    }
+
+
+
+
+}

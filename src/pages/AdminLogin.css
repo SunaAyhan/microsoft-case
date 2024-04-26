@@ -1,0 +1,96 @@
+@media (max-width: 768px) {
+    .ion-page-custom {
+
+
+        --ion-background-color: #F8F0E5;
+
+    }
+
+    .login-card-custom {
+
+        width: 90%;
+        height: 100vh;
+        z-index: 100;
+        --ion-background-color: white;
+
+    }
+
+    .ion-content-custom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+
+    }
+
+    .ion-text-custom {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-family: Sedan;
+        color: #0F2C59;
+        font-weight: 600;
+
+    }
+
+    .ion-button-login {
+
+        background-color: #0F2C59;
+        --background: #0F2C59;
+        --background-hover: white;
+        --color: rgb(255, 255, 255);
+        --border-radius: 20px !important;
+    }
+
+}
+
+
+@media (min-width: 769px) {
+    .ion-page-custom {
+
+
+        --ion-background-color: #F8F0E5;
+    }
+
+
+    .login-card-custom {
+
+        width: 50%;
+        z-index: 100;
+        --ion-background-color: white;
+        height: 100%;
+
+
+    }
+
+    .ion-content-custom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+
+    }
+
+    .ion-text-custom {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-family: Sedan;
+        color: #0F2C59;
+        font-weight: 600;
+
+    }
+
+    .ion-button-login {
+
+
+        background-color: #0F2C59;
+        --background: #0F2C59;
+        --background-hover: white;
+        --color: rgb(255, 255, 255);
+        --border-radius: 20px !important;
+        margin-top: 2rem;
+    }
+
+
+}

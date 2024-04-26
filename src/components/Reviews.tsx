@@ -1,46 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IonAvatar, IonButton, IonCard, IonContent, IonItem, IonLabel, IonList, IonRow } from '@ionic/react';
 import './Reviews.css';
+import axios from 'axios';
 
-function ReviewPage(){
-    const isMobile = window.innerWidth < 768; 
+function ReviewPage() {
+  const isMobile = window.innerWidth < 768;
+  const [messages, setMessages] = useState([]);
 
+  useEffect(() => {
+    axios.get('http://localhost:3000/get-messages')
+      .then((response) => setMessages(response.data))
+      .catch((error) => console.log(error));
+  }, []);
   return (
-    <IonContent color="light">
-        <IonCard  >
-            <img style={{
-          display: isMobile ? 'block' : 'none', 
+    <IonContent className='ion-content-custom' color="light">
+      <IonCard  >
+        <img style={{
+          display: isMobile ? 'block' : 'none',
           height: '50%'
 
-          
-      }} className='image' src='../../public/assets/louvre.jpg' />
-        </IonCard>
-      <IonList className='ion-list-custom' inset={true} >
-      <IonItem >
+        }} className='image' src='../../public/assets/louvre.jpg' />
+      </IonCard>
+      <IonList className='ion-list-custom' inset={true}>
+        {messages.map(message => (
+          <IonItem key={message._id}>
             <IonAvatar slot="start">
-              <img src={'https://picsum.photos/80/80?random=' } alt="avatar" />
+              <img src={'https://picsum.photos/80/80?random=' + message._id} alt="avatar" />
             </IonAvatar>
-           <IonLabel> <b>Suna Ayhan:</b>  It was a great experience!</IonLabel>
+            <IonLabel><b>{message.fullName}:</b> {message.message}</IonLabel>
           </IonItem>
-        <IonItem>
-          <IonLabel>Mega Man X</IonLabel>
-        </IonItem>
-        <IonItem>
-          <IonLabel>The Legend of Zelda</IonLabel>
-        </IonItem>
-        <IonItem>
-          <IonLabel>Pac-Man</IonLabel>
-        </IonItem>
-        <IonItem>
-          <IonLabel>Super Mario World</IonLabel>
-        </IonItem>
+        ))}
       </IonList>
       <div style={{
-    alignItems:'center',
-    display:'flex',
-    justifyContent:'center'
-  }} >  <IonButton className='ion-button-custom' >Write Review</IonButton></div>
-    
+        alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center'
+      }} >  <IonButton className='ion-button-custom' >Write Message</IonButton></div>
+
     </IonContent>
   );
 }

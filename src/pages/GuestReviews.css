@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .ion-header-custom {
+        box-shadow: none;
+
+    }
+
+    .ion-header-title {
+        font-size: 1.5rem;
+
+    }
+}
+
+
+@media (min-width: 769px) {
+    .ion-header-custom {
+        font-size: 1rem;
+
+
+    }
+
+    .custom-background,
+    .custom-background .hydrated {
+        --background: url('../../public/assets/louvre.jpg') 0 0/cover no-repeat;
+    }
+}

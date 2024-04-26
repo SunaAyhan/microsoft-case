@@ -1,19 +1,62 @@
-ion-button {
-    --background: #9f9df3;
-    --background-hover: #9f9df3;
-    --color: White;
-    --border-radius: 10px;
-    width: 10rem;
-    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
-    --padding-top: 10px;
-    --padding-bottom: 10px;
+.ion-button-custom {
+  --background: #0F2C59;
+  --background-hover: #0F2C59;
+  --color: White;
+  --border-radius: 10px;
+  width: 10rem;
+
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  margin: 1rem;
+}
+
+
+.ion-button-upload {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  --background: white;
+  --background-hover: white;
+  --color: rgb(0, 0, 0);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+  .ion-card-custom {
+
     margin: 1rem;
+    box-shadow: 0 4px 4px 0 none;
+
+
   }
-  .ion-card-custom{
-    max-height: 50vh;
+}
+
+
+@media (min-width: 769px) {
+  .ion-card-custom {
     margin: 1rem;
-    overflow-y: auto;
+    box-shadow: none;
+  }
+
+  .ion-main-card-custom {
+    width: 80%;
+    box-shadow: 20px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 2rem;
+  }
 
+  .ion-content-custom {
+    --ion-color-light: #F8F0E5;
 
   }
+
+
+
+}

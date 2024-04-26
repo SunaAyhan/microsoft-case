@@ -1,32 +1,33 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { useParams } from 'react-router';
-import ExploreContainer from '../components/ExploreContainer';
 import TextArea from '../components/TextArea';
 import ReviewPage from '../components/Reviews';
-
+import './GuestReviews.css'
+import Menu from '../components/Menu';
 const GuestReview: React.FC = () => {
 
 
 
-  return (
-    <IonPage className="custom-background" >
-      <IonHeader>
+  return (<IonPage className="custom-background" >
+
+    <IonHeader className='ion-header-custom' > <Menu />
+      <IonToolbar className='ion-header-custom'>
+        <IonButtons slot="start">
+          <IonMenuButton />
+        </IonButtons>
+        <IonTitle  >Guest Messages</IonTitle>
+      </IonToolbar>
+    </IonHeader>
+    <IonContent fullscreen>
+      <IonHeader collapse="condense">
         <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>TEXT</IonTitle>
+          <IonTitle className='ion-header-title' size="large">Guest Messages</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="custom-background" fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle className="ion-title" size="large">text</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ReviewPage />
-      </IonContent>
-    </IonPage>
+      <ReviewPage />
+    </IonContent>
+  </IonPage>
+
   );
 };
 

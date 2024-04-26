@@ -2,7 +2,6 @@ import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/r
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
-import Page from './pages/Page';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,6 +35,8 @@ import './theme/variables.css';
 import TextArea from './components/TextArea';
 import GuestReviews from './pages/GuestReviews';
 import SendMessage from './pages/SendMessage';
+import LoginPage from './pages/AdminLogin';
+import AdminPanel from './pages/AdminPanel';
 
 setupIonicReact();
 
@@ -43,21 +44,28 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <IonReactRouter>
-        <IonSplitPane contentId="main">
-          <Menu />
-          <IonRouterOutlet id="main">
-            
-            <Route path="/" exact={true}>
-              <Redirect to="/folder/Inbox" />
-            </Route>
-            <Route path="/reviews" exact={true}>
-              <GuestReviews />
-            </Route>
-            <Route path="/messages" exact={true}>
-              <SendMessage />
-            </Route>
-          </IonRouterOutlet>
-        </IonSplitPane>
+        <Route path="/admin-panel" exact={true}>
+          <AdminPanel />
+        </Route>
+        <Route path="/login" exact={true}>
+          <LoginPage />
+        </Route>
+        <Route path="/pages">
+          <IonSplitPane contentId="main">
+            <Menu />
+            <IonRouterOutlet id="main">
+              <Route path="/pages">
+                <Redirect to="/pages/messages" />
+              </Route>
+              <Route path="/pages/messages">
+                <GuestReviews />
+              </Route>
+              <Route path="/pages/newMessage">
+                <SendMessage />
+              </Route>
+            </IonRouterOutlet>
+          </IonSplitPane>
+        </Route>
       </IonReactRouter>
     </IonApp>
   );
