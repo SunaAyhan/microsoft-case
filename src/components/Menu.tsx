@@ -24,17 +24,17 @@ interface AppPage {
 const appPages: AppPage[] = [
   {
     title: 'Reviews',
-    url: '/folder/Reviews',
+    url: '/reviews',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   },
   {
     title: 'Write New Review',
-    url: '/folder/Write Your Message',
+    url: '/messages',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
-  
+
 ];
 
 
@@ -59,7 +59,7 @@ const Menu: React.FC = () => {
           })}
         </IonList>
 
-       
+
       </IonContent>
     </IonMenu>
   );

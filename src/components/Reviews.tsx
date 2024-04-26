@@ -2,8 +2,8 @@ import React from 'react';
 import { IonAvatar, IonButton, IonCard, IonContent, IonItem, IonLabel, IonList, IonRow } from '@ionic/react';
 import './Reviews.css';
 
-function ReviewPage() {
-    const isMobile = window.innerWidth < 768; // Basit bir mobil kontrol
+function ReviewPage(){
+    const isMobile = window.innerWidth < 768; 
 
   return (
     <IonContent color="light">

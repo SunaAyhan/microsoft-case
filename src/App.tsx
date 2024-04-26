@@ -33,6 +33,9 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import TextArea from './components/TextArea';
+import GuestReviews from './pages/GuestReviews';
+import SendMessage from './pages/SendMessage';
 
 setupIonicReact();
 
@@ -43,11 +46,15 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
+            
             <Route path="/" exact={true}>
               <Redirect to="/folder/Inbox" />
             </Route>
-            <Route path="/folder/:name" exact={true}>
-              <Page />
+            <Route path="/reviews" exact={true}>
+              <GuestReviews />
+            </Route>
+            <Route path="/messages" exact={true}>
+              <SendMessage />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

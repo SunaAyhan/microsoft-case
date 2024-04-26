@@ -1,6 +1,6 @@
 /* Base styles for all devices */
 .ion-card-custom {
-    height: 10%; 
+    height: 50%; 
   
   }
   
@@ -27,14 +27,14 @@
   
   @media (max-width: 768px) {
     .ion-card-custom {
-      height: 5%;
+      height: 20%;
     }
   }
   
  
   @media (min-width: 769px) {
     .ion-card-custom {
-        height: 10%;
+        height: 50%;
       
     }
   }

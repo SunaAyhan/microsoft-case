@@ -1,46 +1,57 @@
-import React from 'react';
-import { IonItem, IonTextarea } from '@ionic/react';
-import { IonCard } from '@ionic/react';
-import { IonInput, IonList } from '@ionic/react';
-import { IonButton } from '@ionic/react';
+import React, { useState } from 'react';
+import { IonContent, IonItem, IonTextarea, IonCard, IonInput, IonList, IonButton } from '@ionic/react';
+import axios from 'axios';
 import './TextArea.css';
 
-
 function TextArea() {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post('http://localhost:3000/send-review', { fullName, email, message });
+      console.log(response.data); // handle response as needed
+    } catch (error) {
+      console.error('Error sending review:', error);
+    }
+  };
+
   return (
-    <div  ><IonCard style={{
-        margin:'4rem',
-        
-    }} >  
-    <IonList>
-    <IonItem>
-      <IonInput style={{
-        margin:'0rem', padding:'0rem'
-      }} placeholder="fullname"></IonInput>
-    </IonItem>
-    <IonItem>
-      <IonInput placeholder="email"></IonInput>
-    </IonItem>
+    <IonContent color="light">
+      <IonCard className='ion-card-custom'>
+        <IonList>
+          <IonItem>
+            <IonInput
+              value={fullName}
+              onIonChange={e => setFullName(e.detail.value ?? '')} // Using ?? operator to fallback to empty string if null or undefined
+              placeholder="Full name">
+            </IonInput></IonItem>
 
-    <IonItem>
-      <IonTextarea style={{
-        height:'10rem',
-        textAlign:'start',
-        
-      }} label="Your Reviews" labelPlacement="stacked"></IonTextarea>
-    </IonItem>
+          <IonItem>
+            <IonInput
+              value={email}
+              onIonChange={e => setEmail(e.detail.value ?? '')} // Same fallback for email
+              placeholder="Email">
+            </IonInput>
+          </IonItem>
 
-  </IonList>
-  <div style={{
-    alignItems:'center',
-    display:'flex',
-    justifyContent:'center'
-  }} > <IonButton  >Send</IonButton></div>
- 
+          <IonItem>
+            <IonTextarea
+              value={message}
+              onIonChange={e => setMessage(e.detail.value ?? '')} // And for message
+              style={{ height: '10rem', textAlign: 'start' }}
+              placeholder="Your Reviews">
+            </IonTextarea>
+          </IonItem>
 
-  </IonCard></div>
-    
-   
+        </IonList>
+        <div style={{ alignItems: 'center', display: 'flex', justifyContent: 'center' }}>
+          <IonButton onClick={handleSubmit}>Send</IonButton>
+        </div>
+      </IonCard>
+    </IonContent>
   );
 }
+
 export default TextArea;
