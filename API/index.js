@@ -139,15 +139,35 @@ fastify.post("/approve-messages", async (request, reply) => {
     const id = data.id;
 
     var decoded = jwt.verify(data.token, secret);
-    const messagesList = await messages.updateOne({_id:ObjectId(id)},{ $set: {isApproved: true} });
-    
+    const messagesList = await messages.updateOne({_id:new ObjectId(id)},{ $set: {isApproved: true} });
     reply.send({ success: true });
   } catch (err) {
+    console.log(err)
     reply
       .status(500)
       .send({ success: false, message: "Data Fetching Error", err });
   }
 });
+
+fastify.post("/reject-messages", async (request, reply) => {
+  const db = await connectDatabase();
+  const messages = db.collection("messages");
+
+  try {
+    const data = request.body;
+    const id = data.id;
+
+    var decoded = jwt.verify(data.token, secret);
+    const messagesList = await messages.deleteOne({_id:new ObjectId(id)});
+    reply.send({ success: true });
+  } catch (err) {
+    console.log(err)
+    reply
+      .status(500)
+      .send({ success: false, message: "Data Fetching Error", err });
+  }
+});
+
 
 
 fastify.listen({ port: 3000 }, (err) => {

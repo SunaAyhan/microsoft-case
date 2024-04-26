@@ -5,9 +5,9 @@ import Cookies from "js-cookie";
 import axios from 'axios';
 
 const AdminPanel = () => {
-    const [messages, setMessages] = useState([
+    const [messages, setMessages] = useState<any[]>([])
 
-    ]);
+    const [updated, setUpdated] = useState(false)
 
     const token = Cookies.get("token");
     const router = useIonRouter();
@@ -20,11 +20,23 @@ const AdminPanel = () => {
                     id: id.target.id
                 })
             .then((response) => {
-                if (response.data.messagesList) {
-                    setMessages(response.data.messagesList);
+                setUpdated(true)
+            })
+            .catch((error) => {
+                console.error("API Error:", error);
+            });
+    }
 
-                }
-
+    const handleReject = (id: any) => {
+        console.log(id.target.id)
+        axios
+            .post("http://localhost:3000/reject-messages",
+                {
+                    token: token,
+                    id: id.target.id
+                })
+            .then((response) => {
+                setUpdated(true)
             })
             .catch((error) => {
                 console.error("API Error:", error);
@@ -52,7 +64,7 @@ const AdminPanel = () => {
             .catch((error) => {
                 console.error("API Error:", error);
             });
-    }, []);
+    }, [updated]);
 
 
     return (
@@ -66,8 +78,8 @@ const AdminPanel = () => {
                         {messages.map((comment) => (
                             <IonItem key={comment.id}>
                                 <IonLabel className='label-custom' > <b> {comment.fullName} :</b> {comment.message} </IonLabel>
-                                <IonButton className='button-accept' id={comment._id} onClick={handleApprove} color="success" >Kabul Et</IonButton>
-                                <IonButton className='button-accept' color="danger" >Reddet</IonButton>
+                                <IonButton className='button-accept' id={comment._id} onClick={handleApprove} color="success" >Accept</IonButton>
+                                <IonButton className='button-accept' color="danger" id={comment._id} onClick={handleReject} >Reject</IonButton>
                             </IonItem>
                         ))}
                     </IonList>

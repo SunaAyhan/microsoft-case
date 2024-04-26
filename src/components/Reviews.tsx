@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function ReviewPage() {
   const isMobile = window.innerWidth < 768;
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<any[]>([])
 
   useEffect(() => {
     axios.get('http://localhost:3000/get-messages')
