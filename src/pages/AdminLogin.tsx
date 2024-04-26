@@ -11,7 +11,7 @@ const LoginPage = () => {
     const router = useIonRouter();
 
 
-    const handleLogin = async (e) => {
+    const handleLogin = async (e: any) => {
         e.preventDefault();
 
         try {
