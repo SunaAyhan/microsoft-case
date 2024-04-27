@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IonContent, IonItem, IonTextarea, IonCard, IonInput, IonList, IonButton, IonAlert } from '@ionic/react';
 import axios from 'axios';
 import './TextArea.css';
+import louvreImage2 from './assets/louvre2.jpg'; // Import the image here, adjust the path as necessary
 
 function TextArea() {
   const [fullName, setFullName] = useState('');
@@ -31,7 +32,7 @@ function TextArea() {
       <IonCard className='ion-main-card-custom' style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row' }}>
         <div style={{
           position: 'relative',
-          backgroundImage: `url(../../public/assets/louvre2.jpg)`,
+          backgroundImage: `url(${louvreImage2})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           width: isMobile ? '100%' : '50%',
