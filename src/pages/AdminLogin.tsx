@@ -51,7 +51,7 @@ const LoginPage = () => {
                     <IonText className='ion-text-custom'>
                         Louvre Guestbook
                     </IonText>
-                    <IonCard className='login-card-custom' style={{ display: 'flex' }}>
+                    <IonCard className='login-card-custom' style={{ display: 'flex', overflow: 'auto' }}>
                         <img src={loginImage} alt="Login" style={{ width: '50%', objectFit: 'cover', display: isMobile ? 'none' : 'block', }} />
                         <div style={{ width: isMobile ? '100%' : '50%', padding: '20px' }}>
                             <IonItem>

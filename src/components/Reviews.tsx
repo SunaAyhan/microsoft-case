@@ -14,8 +14,7 @@ function ReviewPage() {
       .catch((error) => console.log(error));
   }, []);
   const formatDate = (dateString: any) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    return new Date(dateString).toLocaleDateString(undefined, options);
+    return new Date(dateString).toLocaleDateString()
   };
 
   return (

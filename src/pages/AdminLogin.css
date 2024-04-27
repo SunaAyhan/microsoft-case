@@ -8,8 +8,8 @@
 
     .login-card-custom {
 
-        width: 90%;
-        height: 100vh;
+        width: 50%;
+        height: 50vh;
         z-index: 100;
         --ion-background-color: white;
 
@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 100vh;
+
 
     }
 
@@ -47,19 +47,16 @@
 
 @media (min-width: 769px) {
     .ion-page-custom {
-
-
         --ion-background-color: #F8F0E5;
+        height: 100vh;
+        flex-direction: column;
+        display: flex;
     }
 
 
     .login-card-custom {
-
-        width: 50%;
-        z-index: 100;
+        width: 60%;
         --ion-background-color: white;
-        height: 100%;
-
 
     }
 
@@ -68,6 +65,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        overflow: hidden;
+        flex: 1;
         height: 100vh;
 
     }
