@@ -4,13 +4,17 @@
 
 Project Link: [Website](https://guestbook.sunaayhan.com/pages/messages) Download
 APK:
-![Android](https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/qr.png?raw=true)
+![Android](https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/qr.png?raw=true
+=250x)
 
 ## Screenshots
 
-![Home](https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page1m.jpeg?raw=true)
-![Home](https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page11m.jpeg?raw=true)
-![Page2](https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page2m.jpeg?raw=true)
+![Home](https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page1m.jpeg?raw=true
+=250x)
+![Home](https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page11m.jpeg?raw=true
+=250x)
+![Page2](https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page2m.jpeg?raw=true
+=250x)
 
 ## Documentation
 
