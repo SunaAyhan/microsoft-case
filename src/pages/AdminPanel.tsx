@@ -14,7 +14,7 @@ const AdminPanel = () => {
     const handleApprove = (id: any) => {
         console.log(id.target.id)
         axios
-            .post("http://localhost:3000/approve-messages",
+            .post("https://visitorapi.sunaayhan.com/approve-messages",
                 {
                     token: token,
                     id: id.target.id
@@ -30,7 +30,7 @@ const AdminPanel = () => {
     const handleReject = (id: any) => {
         console.log(id.target.id)
         axios
-            .post("http://localhost:3000/reject-messages",
+            .post("https://visitorapi.sunaayhan.com/reject-messages",
                 {
                     token: token,
                     id: id.target.id
@@ -53,7 +53,7 @@ const AdminPanel = () => {
         }
 
         axios
-            .post("http://localhost:3000/get-unapproved-messages",
+            .post("https://visitorapi.sunaayhan.com/get-unapproved-messages",
                 {
 
                     token: token

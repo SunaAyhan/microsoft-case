@@ -9,7 +9,7 @@ function ReviewPage() {
   const [messages, setMessages] = useState<any[]>([])
 
   useEffect(() => {
-    axios.get('http://localhost:3000/get-messages')
+    axios.get('https://visitorapi.sunaayhan.com/get-messages')
       .then((response) => setMessages(response.data))
       .catch((error) => console.log(error));
   }, []);

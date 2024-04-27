@@ -13,7 +13,7 @@ function TextArea() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/send-message', { fullName, email, message });
+      const response = await axios.post('https://visitorapi.sunaayhan.com/send-message', { fullName, email, message });
       console.log(response.data);
       setAlertMessage("Your message has been sent, thank you for your comments.");
       setShowAlert(true);

@@ -19,7 +19,7 @@ const LoginPage = () => {
                 email: email,
                 password: password,
             }
-            const response = await fetch("http://localhost:3000/backend-login-endpoint", {
+            const response = await fetch("https://visitorapi.sunaayhan.com/backend-login-endpoint", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
