@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IonContent, IonItem, IonTextarea, IonCard, IonInput, IonList, IonButton, IonAlert } from '@ionic/react';
 import axios from 'axios';
 import './TextArea.css';
-import louvreImage2 from './assets/louvre2.jpg'; // Import the image here, adjust the path as necessary
+import louvreImage2 from '../../public/assets/louvre2.jpg'; // Import the image here, adjust the path as necessary
 
 function TextArea() {
   const [fullName, setFullName] = useState('');
