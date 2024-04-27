@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { IonAvatar, IonButton, IonCard, IonContent, IonItem, IonLabel, IonList, IonRow } from '@ionic/react';
+import { IonAvatar, IonButton, IonCard, IonContent, IonItem, IonLabel, IonList, IonRow, useIonRouter } from '@ionic/react';
 import './Reviews.css';
 import axios from 'axios';
 import louvreImage from '../../public/assets/louvre.jpg';
@@ -7,6 +7,8 @@ import louvreImage from '../../public/assets/louvre.jpg';
 function ReviewPage() {
   const isMobile = window.innerWidth < 768;
   const [messages, setMessages] = useState<any[]>([])
+  const router = useIonRouter();
+
 
   useEffect(() => {
     axios.get('https://visitorapi.sunaayhan.com/get-messages')
@@ -16,6 +18,10 @@ function ReviewPage() {
   const formatDate = (dateString: any) => {
     return new Date(dateString).toLocaleDateString()
   };
+  const handleNavigateToNew = () => {
+    router.push('/pages/newMessage');
+  };
+
 
   return (
     <IonContent className='ion-content-custom' color="light">
@@ -46,7 +52,7 @@ function ReviewPage() {
         alignItems: 'center',
         display: 'flex',
         justifyContent: 'center'
-      }} >  <IonButton className='ion-button-custom' >Write Message</IonButton></div>
+      }} >  <IonButton onClick={handleNavigateToNew} className='ion-button-custom' >Write Message</IonButton></div>
 
     </IonContent>
   );
