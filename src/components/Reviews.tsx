@@ -23,7 +23,10 @@ function ReviewPage() {
         <img alt="Louvre" style={{ display: isMobile ? 'block' : 'none', height: '50%' }} className='image' src={louvreImage} />
       </IonCard>
       <IonList style={{
-        margin: isMobile ? '1rem' : '2rem'
+        margin: isMobile ? '1rem' : '2rem',
+        overflowY: 'auto',
+        maxHeight: '500px'
+
 
       }} className='ion-list-custom' inset={true}>
         {messages.map(message => (
