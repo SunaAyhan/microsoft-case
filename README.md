@@ -12,7 +12,9 @@ Download APK:
 
 ### Mobile
 
-<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page1m.jpeg?raw=true" height="500"><img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page11m.jpeg?raw=true" height="500"><img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page2m.jpeg?raw=true" height="500">
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page1m.jpeg?raw=true" height="500">
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page11m.jpeg?raw=true" height="500">
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page2m.jpeg?raw=true" height="500">
 
 ### Web
 
