@@ -4,9 +4,7 @@
 
 Project Link: [Website](https://guestbook.sunaayhan.com/pages/messages)
 
-Download APK:
-
-<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/qr.png?raw=true"  height="300">
+Download APK: [APK Link](https://github.com/SunaAyhan/microsoft-case/releases/download/V1.0/louvre-guestbook-master-1b3222-debug.apk)
 
 ## Screenshots
 
