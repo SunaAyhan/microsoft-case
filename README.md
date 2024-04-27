@@ -2,15 +2,25 @@
 
 ## Project
 
-Project Link: [Website](https://guestbook.sunaayhan.com/pages/messages) Download
-APK:
-<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/qr.png?raw=true" width="300" height="300">
+Project Link: [Website](https://guestbook.sunaayhan.com/pages/messages)
+
+Download APK:
+
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/qr.png?raw=true"  height="300">
 
 ## Screenshots
+
+### Mobile
 
 <img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page1m.jpeg?raw=true" height="500">
 <img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page11m.jpeg?raw=true" height="500">
 <img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page2m.jpeg?raw=true" height="500">
+
+### Web
+
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page1edited.jpg?raw=true" height="500">
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page2edited.jpg?raw=true" height="500">
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/loginedited.jpg?raw=true" height="500">
 
 ## Documentation
 
