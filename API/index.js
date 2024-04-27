@@ -168,9 +168,13 @@ fastify.post("/reject-messages", async (request, reply) => {
   }
 });
 
+fastify.get("/", async (request, reply) => {
+  
+    reply.send("Api is working!");
+    
+});
 
-
-fastify.listen({ port: 80 }, (err) => {
+fastify.listen(80,'188.132.128.45', (err) => {
     if (err) {
       console.error("Error starting server:", err);
       process.exit(1);
