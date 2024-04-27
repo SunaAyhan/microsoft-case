@@ -101,6 +101,10 @@ To get Guestbook up and running on your local environment, follow these steps:
    node index.js
    ```
 
+### Usage
+After starting the app, users can list messages from the home page. Can write a message using the "Write New Message" tab. Messages are sent to approval before being listed on the home page. 
+To approve a message, you should login to the admin page using [login page](https://guestbook.sunaayhan.com/login). You can then approve or reject messages on that page. 
+
 ## Structure
 
 Here's a brief overview of the project structure:
