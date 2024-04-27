@@ -170,10 +170,10 @@ fastify.post("/reject-messages", async (request, reply) => {
 
 
 
-fastify.listen({ port: 3000 }, (err) => {
+fastify.listen({ port: 80 }, (err) => {
     if (err) {
       console.error("Error starting server:", err);
       process.exit(1);
     }
-    console.log("Server listening on port 3000");
+    console.log("Server listening on port 80");
   });
