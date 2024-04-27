@@ -7,6 +7,10 @@ APK:
 <img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/qr.png?raw=true" width="300" height="300">
 
 ## Screenshots
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/home.PNG?raw=true" height="500">
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page2.PNG?raw=true" height="500">
+<img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/login.PNG?raw=true" height="500">
+
 
 <img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page1m.jpeg?raw=true" height="500">
 <img src="https://github.com/sunaayhan/microsoft-case/blob/master/images_readme/ss/page11m.jpeg?raw=true" height="500">
