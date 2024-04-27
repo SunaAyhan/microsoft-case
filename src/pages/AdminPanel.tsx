@@ -20,7 +20,7 @@ const AdminPanel = () => {
                     id: id.target.id
                 })
             .then((response) => {
-                setUpdated(true)
+                setUpdated(!updated)
             })
             .catch((error) => {
                 console.error("API Error:", error);
@@ -36,12 +36,16 @@ const AdminPanel = () => {
                     id: id.target.id
                 })
             .then((response) => {
-                setUpdated(true)
+                setUpdated(!updated)
             })
             .catch((error) => {
                 console.error("API Error:", error);
             });
     }
+    const handleNavigateToReviews = () => {
+        router.push('/pages/messages');
+    };
+
     useEffect(() => {
 
         if (!token) {
@@ -70,19 +74,43 @@ const AdminPanel = () => {
     return (
         <IonPage className='ion-page-custom'>
             <IonContent>
-                <div className="ion-content-custom">
+                <div style={{
+                    padding: '5rem',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    display: 'flex',
+                    flexDirection: 'column'
+                }} >
                     <IonText className='ion-text-custom'>
                         Louvre Guestbook
                     </IonText>
-                    <IonCard className='card-custom' >   <IonList>
-                        {messages.map((comment) => (
-                            <IonItem key={comment.id}>
-                                <IonLabel className='label-custom' > <b> {comment.fullName} :</b> {comment.message} </IonLabel>
-                                <IonButton className='button-accept' id={comment._id} onClick={handleApprove} color="success" >Accept</IonButton>
-                                <IonButton className='button-accept' color="danger" id={comment._id} onClick={handleReject} >Reject</IonButton>
-                            </IonItem>
-                        ))}
-                    </IonList>
+                    <IonButton onClick={handleNavigateToReviews} expand="block" fill="outline">
+                        Go to Reviews
+                    </IonButton>
+                    <IonCard className='card-custom' >
+                        <IonList style={{
+                            padding: '2rem'
+                        }} >
+                            {messages.length > 0 ? (
+                                messages.map((comment) => (
+                                    <IonItem key={comment.id}>
+                                        <IonLabel className='label-custom' >
+                                            <b>{comment.fullName}:</b> {comment.message}
+                                        </IonLabel>
+                                        <IonButton className='button-accept' id={comment._id} onClick={handleApprove} color="success">
+                                            Accept
+                                        </IonButton>
+                                        <IonButton className='button-accept' color="danger" id={comment._id} onClick={handleReject}>
+                                            Reject
+                                        </IonButton>
+                                    </IonItem>
+                                ))
+                            ) : (
+                                <IonText className='ion-text-custom'>
+                                    There is no message.
+                                </IonText>
+                            )}
+                        </IonList>
                     </IonCard>
 
                 </div>

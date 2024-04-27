@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { IonAvatar, IonButton, IonCard, IonContent, IonItem, IonLabel, IonList, IonRow } from '@ionic/react';
 import './Reviews.css';
 import axios from 'axios';
+import louvreImage from '../../public/assets/louvre.jpg';
 
 function ReviewPage() {
   const isMobile = window.innerWidth < 768;
@@ -12,22 +13,30 @@ function ReviewPage() {
       .then((response) => setMessages(response.data))
       .catch((error) => console.log(error));
   }, []);
+  const formatDate = (dateString: any) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
   return (
     <IonContent className='ion-content-custom' color="light">
       <IonCard  >
-        <img style={{
-          display: isMobile ? 'block' : 'none',
-          height: '50%'
-
-        }} className='image' src='../../public/assets/louvre.jpg' />
+        <img alt="Louvre" style={{ display: isMobile ? 'block' : 'none', height: '50%' }} className='image' src={louvreImage} />
       </IonCard>
-      <IonList className='ion-list-custom' inset={true}>
+      <IonList style={{
+        margin: isMobile ? '1rem' : '2rem'
+
+      }} className='ion-list-custom' inset={true}>
         {messages.map(message => (
           <IonItem key={message._id}>
             <IonAvatar slot="start">
               <img src={'https://picsum.photos/80/80?random=' + message._id} alt="avatar" />
             </IonAvatar>
-            <IonLabel><b>{message.fullName}:</b> {message.message}</IonLabel>
+            <IonLabel><b style={{
+              color: '#0F2C59'
+            }} >{message.fullName}:</b> {message.message}  <div style={{ float: 'right', color: 'grey' }}>
+                {formatDate(message.createdAt)}
+              </div> </IonLabel>
           </IonItem>
         ))}
       </IonList>

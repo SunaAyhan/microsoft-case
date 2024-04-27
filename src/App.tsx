@@ -50,7 +50,7 @@ const App: React.FC = () => {
         <Route path="/login" exact={true}>
           <LoginPage />
         </Route>
-        <Route path="/" >
+        <Route path="/" exact={true} >
           <Redirect to="/pages/messages" />
         </Route>
         <Route path="/pages">
