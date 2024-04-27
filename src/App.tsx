@@ -26,9 +26,7 @@ import '@ionic/react/css/display.css';
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
-/* import '@ionic/react/css/palettes/dark.always.css'; */
 /* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
@@ -37,10 +35,15 @@ import GuestReviews from './pages/GuestReviews';
 import SendMessage from './pages/SendMessage';
 import LoginPage from './pages/AdminLogin';
 import AdminPanel from './pages/AdminPanel';
+import { useEffect } from 'react';
 
 setupIonicReact();
 
+
 const App: React.FC = () => {
+  useEffect(() => {
+    document.body.classList.toggle('dark', false);
+  }, []);
   return (
     <IonApp>
       <IonReactRouter>
